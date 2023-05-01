@@ -1,0 +1,114 @@
+div{
+    width: 100%;
+}
+div.edit-right{
+    padding-left: 20%;
+}
+.navbar-brand{
+    padding-left: 8%;
+    
+}
+p{
+    padding-top: 7px;
+    font-size: 1.7rem;
+    font-family: 'Space Mono', monospace;
+
+}
+div.collapse{
+    padding-right: 35rem;
+}
+div.nav-edit{
+    height: 60px;
+    width: 100%;
+}
+section#about{
+    padding-top: 6em;
+
+}
+img{
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+}
+h1,h2,h3,h4,h5.h6{
+    font-family: 'Space Mono', monospace;
+
+}
+.abc{
+    text-align: center;
+}
+
+.data{
+    margin: 20px;
+}
+
+div.publication-data{
+    background-color: #E8D2A6;
+    text-align: center;
+    height: 300px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.paper-name{
+    text-align: left;
+}
+
+#projects{
+ padding: 2%;   
+}
+
+div.contact-data{
+    text-align: center;
+    height: 300px;
+    padding-top: 200px;
+}
+
+a.nav-link:hover{
+    color: #fff;
+}
+
+a.nav-link:active{
+    color: #fff;
+}
+
+.bio{
+    font-size: 20px;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.name{
+    font-family: 'Space Mono', monospace;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Kalam', cursive;
+}
+
+.active{
+    color: #fff;
+}
+#skills{
+    background-color: #E8D2A6;
+    height: 500px;
+    text-align: center  ;
+}
+.skil{
+    padding-right: 10%;
+    padding-top: 100px;
+}
+
+#blogs{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100px;
+}
+
+#contact{
+    
+    background-color: #E8D2A6;
+}

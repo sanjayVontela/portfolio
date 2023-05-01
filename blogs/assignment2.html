@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Classifier</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+           
+        <div class="box">
+            <div class="details">
+                <h4>Vontela Sanjay Kumar</h4>
+                
+            </div>
+            <div class="heading">
+                <h1><u>Naive Bayes Classifier</u></h1>
+            </div>
+            <div class="overview"></div>
+            <h3 class="heading2"><u>Overview</u></h3>
+            <p class="heading2">Sentiment analysis is a process of identifying whether the given text is positive or negative or neutral. In this experiment we used Naïve Bayes algorithm for doing sentient analysis. The dataset consists of 2 columns. One is reviews and the other is class which tells weather the review is fresh or rotten. The dataset consists of 480001 rows.
+                Naïve Bayes is a probabilistic classifier that uses Bayes’ theorem to calculate the probability of text to each class. Naïve Bayes is a simple yet powerful classifier and it is widely used in natural language processing. 
+                </p>
+                <h3 class="heading2"><u>Naïve Bayes Algorithm:</u></h3>
+            <p class="heading2">Naïve Bayes classification uses bayes theorem to predict the probability of each text(review) from dataset to that of each class from the dataset. The class with highest probability will get be considered as most likely class.</p>
+            <h4 class="heading2"><b><u>Naive Bayes Formula</u></b></h2>
+            <p style="color:red;text-align:center;">P(A|B) = P(B|A) * P(A) / P(B)</p>
+               <h2 class="heading2"><b><u>Import Libraries</u></b></h2>
+               <p class="heading2">The first step will be importing the libraries. For this problem I am using numpy, pandas, regex and tqdm</p>
+               
+               <img src="assignment2/1.png" alt="">
+               <h2 class="heading2"><b><u>Loading Dataset</u></b></h2>
+               <p class="heading2">The Next step is importing the dataset. We need to import dataset using read_csv method from pandas with encoding “cp1252”</p>
+               <img src="assignment2/2.png" alt="">
+               <h2 class="heading2"><b><u>Data Preprocessing</u></b></h2>
+               <p class="heading2">In the next step we are cleaning the data by removing stopwords and unnecessary characters. Stopwords are common words that are present in text, without stopwords the meaning of the text will not change.</p>
+               <img src="assignment2/3.png" alt="">
+               <h2 class="heading2"><b><u>Splitting Data</u></b></h2>
+               <p class="heading2">The next step is splitting the dataset into train, development and testing data.</p>
+               <img src="assignment2/4.png" alt="">
+               <h2 class="heading2"><b><u>Building Word Count</u></b></h2>
+               <p class="heading2">The next step is building a word count, from the word count I created a vocabulary list where I omitted rare words like if the occurrence is less than 5.</p>
+               <img src="assignment2/5.png" alt="">
+               <p class="heading2">In the next step we created 2 dictionaries called word_to_index and index_to_word in which word_to_index will have a elements like “doesn’t”:0 and in index_to_word it is reverse if word_to_index.</p>
+               <img src="assignment2/6.png" alt="">
+               <img src="assignment2/7.png" alt="">
+               <img src="assignment2/8.png" alt="">
+               <h2 class="heading2"><b><u>Calculating Probability</u></b></h2>
+               <p class="heading2">The next step is finding the probability of each word. To calculate the probability of each word we will divide the occurrence of each word by length of total documents.</p>
+               <img src="assignment2/9.png" alt="">
+               <p class="heading2">Next step is calculating the conditional probability of each word to of each class(fresh, rotten). Conditional probability is the measure of the probability of an event occurring given that another event is already occurring. </p>
+               <img src="assignment2/10.png" alt="">
+               <img src="assignment2/11.png" alt="">
+               <h2 class="heading2"><b><u>Smoothing</u></b></h2>
+               <p class="heading2">The next step is smoothing. In smoothing we solve the problem of zero probability adding 1 to the given probability and dividing it with len(class)*len(data)</p>
+               <img src="assignment2/12.png" alt="">
+               <h2 class="heading2"><b><u>Building Classifier for Development Data</u></b></h2>
+               <p class="heading2">The next step is predicting the class for the text in development data without smoothing and with smoothing</p>
+               <img src="assignment2/13.png" alt="">
+               <img src="assignment2/14.png" alt="">
+               <h5 class="heading2">We can observe from both accuracies that after smoothing the accuracy increased slightly.Before smoothing the accuracy is 79.343% and after smoothing the accuracy is 79.50%</h5>
+               <h2 class="heading2"><b><u>Finding Top 10 words</u></b></h2>
+               <p class="heading2">The next step is finding the top 10 words of each class with highest probability
+                The next step is predicting top 10 words of each class
+                </p>
+               <img src="assignment2/15.png" alt="">
+               <img src="assignment2/16.png" alt="">
+               <img src="assignment2/17.png" alt="">
+               <h2 class="heading2"><b><u>Using classifier with optimal parameters on Test Data</u></b></h2>
+               <p class="heading2">The final step is predicting the text from test dataset with optimal parameters i.e using smoothing</p>
+               <img src="assignment2/18.png" alt="">
+            <h2 class="heading2">Contribution</h2>
+            <ul>
+                <li>Removed stop words from datased</li>
+                <li>Removed all punctuation from data</li>
+                <li>Built Naive Bayes Classifier from scratch</li>
+                
+            </ul>
+               <h5 class="heading2"><b><u>Reference</u></b></h5>
+               <ol>
+                <li>https://vitalflux.com/quick-introduction-smoothing-techniques-language-models/</li>
+               </ol>
+
+                <div class="heading2">
+                    <a  href="assignment2/code.zip" download="code"><button>Click to downlad Code</button></a>
+                    <a href="https://colab.research.google.com/drive/1a1axs5nMpVcPx-DD91ymMTgQBq4qUH3t?usp=sharing">Link to Colab Notebook</a>
+                </div>
+
+        </div>
+
+    </section>
+        
+    </body>
+</html>

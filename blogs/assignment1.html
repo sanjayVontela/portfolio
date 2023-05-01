@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Classifier</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+           
+        <div class="box">
+            <div class="details">
+                <h4>Vontela Sanjay Kumar</h4>
+                
+            </div>
+            <div class="heading">
+                <h1><u>Building Image Classifier</u></h1>
+            </div>
+            <div class="overview"></div>
+            <h3 class="heading2"><u>Overview</u></h3>
+            <p class="heading2">This is a Deep Learning where we need to classify images using an image classification technique. Image classification is a process of classifying images into respective classes. For this challenge we are using dataset from Kaggle. The dataset only contains two dimensions one is image and other is class where class is the name of the expression. I have downloaded the dataset using the link <a href="https://www.kaggle.com/datasets/samaneheslamifar/facial-emotion-expressions ">https://www.kaggle.com/datasets/samaneheslamifar/facial-emotion-expressions</a>  . The classes in the dataset are Angry, Neutral, Sad, Disgust, Happy, Fear, Surprise. The dataset is divided into 2 parts one is for training and one is testing. I have further divided the training data into 2 parts 80% of that data is for training and 20% is for validation</p>
+
+            <p class="heading2">I have converted the images to Grayscale for increasing training speed. As grayscale has only one dimension instead of 3 for RGB it increases the training speed. I have used a CNN model for training images. Using total FC layers instead of CNN may lead to overfitting so I used CNN model. For new model I used 6 Convolution layers, 3 pooling layers and 3 fully connected layers, Relu as activation function and Adam Optimizer with initial learning rate of 0.001, With this model I got an accuracy if 58% on test data.</p>
+               
+            
+               <h2 class="heading2"><b><u>Code</u></b></h2>
+               <img src="assignment1/1.png" alt="">
+               <img src="assignment1/2.png" alt="">
+               <img src="assignment1/3.png" alt="">
+               <img src="assignment1/4.png" alt="">
+               <img src="assignment1/5.png" alt="">
+               <img src="assignment1/6.png" alt="">
+               <img src="assignment1/7.png" alt="">
+               <img src="assignment1/8.png" alt="">
+               <img src="assignment1/9.png" alt="">
+               <img src="assignment1/10.png" alt="">
+               <h3 class="heading2"><u>Model Tuning</u></h3>
+               <p class="heading2">58% accuracy on test data is good but I want to improve that so I tried to rebuild a new model with new parameters and adding new layers to it. The new model contains 6 convolution layers,3 pooling layers , 3 dropout layers and 3 Fully connected layers. Dropout layers removes connections between neurons. Using dropout reduces the chance of overfitting and helps increase accuracy. Using the new model I got an accuracy of 74% on test data.</p>
+               <img src="assignment1/11.png" alt="">
+               <img src="assignment1/12.png" alt="">
+               <img src="assignment1/13.png" alt="">
+               <img src="assignment1/14.png" alt="">
+               <img src="assignment1/15.png" alt="">
+               <h3 class="heading2"><u>Algorithm</u></h3>
+               <p class="heading2">
+                My algorithm contains a 2 convolution layer with relu activation function and a pooling layer. Convolution layer reduces the size of image using the formula 
+((input_size+2)*padding_size-(filter_size-1))/stride. Max pooling is used to downsample the feature map created by convolution layer, in the final steps the feature map created by convolution and pooling is down sampled and flattened for fully connected layers. In FC layer each input is connected to all neurons.
+ 
+               </p>
+               <h3 class="heading2"><u>Challenge</u></h3>
+               <p class="heading2">
+                The main challenge is increasing the accuracy of the model1. The model1 only got 58% to increase the accuracy of the model I used dropout and changed in_channels and out_channels. Adding dropout will remove some neuron connections doing that will stop overfitting and improve accuracy.
+ 
+               </p>
+               <h5 class="heading2"><b><u>Reference</u></b></h5>
+               <ol>
+                <li>Deep Learning with pytroch: zero to GANs</li>
+                <li>pytorch.org/tutorials/beginner/ptcheat.html</li>
+               </ol>
+
+                <div class="heading2">
+                    <a  href="assignment1/code.zip" download="code"><button>Image Classifier code</button></a>
+                </div>
+
+        </div>
+
+    </section>
+        
+    </body>
+</html>
