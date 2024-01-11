@@ -88,6 +88,10 @@ a.nav-link:active{
     font-family: 'Kalam', cursive;
 }
 
+.center{
+    text-align: center;
+}
+
 .active{
     color: #fff;
 }
@@ -109,6 +113,5 @@ a.nav-link:active{
 }
 
 #contact{
-    
-    background-color: #E8D2A6;
+    padding: 2%;
 }
